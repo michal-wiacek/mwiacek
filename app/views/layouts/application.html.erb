@@ -1,14 +1,12 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <title>Mwiacek</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <title><%= @page_title or "Page Title" %></title>
+  <%= stylesheet_link_tag "layout" %>
+  <style><%= yield :stylesheets %></style>
 </head>
 <body>
-<p class="flash"><%= flash.notice %></p>
-<%= yield %>
-
+  <div id="top_menu">Top menu items here</div>
+  <div id="menu">Menu items here</div>
+  <div id="content"><%= content_for?(:content) ? yield(:content) : yield %></div>
 </body>
 </html>
