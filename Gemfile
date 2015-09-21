@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'high_voltage', '~> 2.4.0'
 gem 'rails', '4.2.4'
 gem 'pg'
 gem 'jquery-rails'
@@ -15,7 +16,7 @@ group :assets do
 
   gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 end
-
+gem 'devise'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

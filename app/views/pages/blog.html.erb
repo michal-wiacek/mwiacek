@@ -5,22 +5,15 @@
   <div class="container bloc-lg">
     <div class="row voffset">
       <div class="col-sm-3">
-        <%= image_tag "placeholder-image.png", class: "img-responsive" %>
-        <h3 class="mg-md">
-          Title goes here
-        </h3>
-        <p>
-          Lorem ipsum dolor sit amet, adipiscing elit Aenean commodo ligula eget.
-        </p>
-      </div>
-      <div class="col-sm-3">
-        <%= image_tag "placeholder-image.png", class: "img-responsive" %>
-        <h3 class="mg-md">
-          Title goes here
-        </h3>
-        <p>
-          Lorem ipsum dolor sit amet, adipiscing elit Aenean commodo ligula eget.
-        </p>
+        <%= @articles.each do |p| %>
+          <%= image_tag "placeholder-image.png", class: "img-responsive" %>
+          <h3 class="mg-md">
+            <%= p.title %>
+          </h3>
+          <p>
+            <%= p.body %>
+          </p>
+          <% end %>
       </div>
     </div>
   </div>
